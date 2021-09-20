@@ -10,9 +10,9 @@ package modelo;
  * @author Leonardo Obando
  */
 public class Militares extends Cliente{
-    private String codMilitar;
-    private String estadoMilitar;
-    private String gradoMilitar;
+    protected String codMilitar;
+    protected String estadoMilitar;
+    protected String gradoMilitar;
 
     public Militares(String codMilitar, String estadoMilitar, String gradoMilitar, String nombre, String apellido, long cI, long telefono) {
         super(nombre, apellido, cI, telefono);

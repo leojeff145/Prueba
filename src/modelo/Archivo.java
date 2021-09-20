@@ -38,7 +38,7 @@ public class Archivo {
     }
     
     public void leerArchivoCoorporativo() {
-        File archivo = new File("Agentes.txt");
+        File archivo = new File("Coorporativo.txt");
         try {
             FileReader fr = new FileReader(archivo);
             Scanner ingreso = new Scanner(fr);
@@ -53,7 +53,7 @@ public class Archivo {
      
     public void guardarArchivoGenerales(Generales u) {
         try {
-            FileWriter fw = new FileWriter("Coorporativo.txt", true);
+            FileWriter fw = new FileWriter("Generales.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             pw.println(u.nombre);
@@ -67,7 +67,7 @@ public class Archivo {
     }
     
     public void leerArchivoGenerales() {
-        File archivo = new File("Agentes.txt");
+        File archivo = new File("Generales.txt");
         try {
             FileReader fr = new FileReader(archivo);
             Scanner ingreso = new Scanner(fr);
@@ -82,13 +82,16 @@ public class Archivo {
     
     public void guardarArchivoMilitar(Militares u) {
         try {
-            FileWriter fw = new FileWriter("Coorporativo.txt", true);
+            FileWriter fw = new FileWriter("Militar.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             pw.println(u.nombre);
             pw.println(u.apellido);
             pw.println(u.cI);
-            pw.println(u.telefono);                        
+            pw.println(u.telefono);        
+            pw.println(u.codMilitar);
+            pw.println(u.estadoMilitar);
+            pw.println(u.gradoMilitar);
             pw.close();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);

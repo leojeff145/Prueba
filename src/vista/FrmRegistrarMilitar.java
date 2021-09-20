@@ -5,15 +5,17 @@
  */
 package vista;
 
+import modelo.Archivo;
+import modelo.Militares;
+
 /**
  *
  * @author WISTAR
  */
 public class FrmRegistrarMilitar extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrmRegistrarMilitar
-     */
+    Militares militar = new Militares();
+    Archivo archivoM= new Archivo();
     public FrmRegistrarMilitar() {
         initComponents();
     }
@@ -177,7 +179,22 @@ public class FrmRegistrarMilitar extends javax.swing.JFrame {
     }//GEN-LAST:event_txtApellidoMActionPerformed
 
     private void btnRegistrarMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarMActionPerformed
-        // TODO add your handling code here:
+        String nombre= txtNombreM.getText();
+        String apellido= txtApellidoM.getText(); 
+        long ci= Long.parseLong(txtCIM.getText());
+        long telf= Long.parseLong(txtTelfM.getText());
+        String cod=txtcodM.getText();
+        String estado= txtEstado.getText();
+        String grado= txtGrado.getText();
+        
+        militar.setcI(ci);
+        militar.setNombre(nombre);
+        militar.setApellido(apellido);
+        militar.setTelefono(telf);
+        militar.setCodMilitar(cod);
+        militar.setEstadoMilitar(estado);
+        militar.setGradoMilitar(grado);
+        archivoM.guardarArchivoMilitar(militar);
     }//GEN-LAST:event_btnRegistrarMActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
