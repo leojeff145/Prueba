@@ -50,8 +50,18 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
 
         btnRegistrarMilitar.setText("Registrar Militar");
+        btnRegistrarMilitar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarMilitarActionPerformed(evt);
+            }
+        });
 
         btnSalirPrincipal.setText("Salir");
+        btnSalirPrincipal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirPrincipalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -107,12 +117,29 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarCorporativoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCorporativoActionPerformed
-        // TODO add your handling code here:
+        FrmRegistrarCoorporativo v= new FrmRegistrarCoorporativo();
+        v.setVisible(true);
+        v.setLocationRelativeTo(v);
+        this.dispose();
     }//GEN-LAST:event_btnRegistrarCorporativoActionPerformed
 
     private void btnRegistrarGeneralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarGeneralActionPerformed
-        // TODO add your handling code here:
+        FrmRegistrarGeneral v= new FrmRegistrarGeneral();
+        v.setVisible(true);
+        v.setLocationRelativeTo(v);
+        this.dispose();
     }//GEN-LAST:event_btnRegistrarGeneralActionPerformed
+
+    private void btnRegistrarMilitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarMilitarActionPerformed
+        FrmRegistrarMilitar v= new FrmRegistrarMilitar();
+        v.setVisible(true);
+        v.setLocationRelativeTo(v);
+        this.dispose();
+    }//GEN-LAST:event_btnRegistrarMilitarActionPerformed
+
+    private void btnSalirPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirPrincipalActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnSalirPrincipalActionPerformed
 
     /**
      * @param args the command line arguments
