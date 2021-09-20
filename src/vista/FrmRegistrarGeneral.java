@@ -5,15 +5,17 @@
  */
 package vista;
 
+import modelo.Archivo;
+import modelo.Generales;
+
 /**
  *
  * @author Leonardo Obando
  */
 public class FrmRegistrarGeneral extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrmRegistrarCoorporativo
-     */
+    Generales general = new Generales();
+    Archivo archivoAg= new Archivo();
     public FrmRegistrarGeneral() {
         initComponents();
     }
@@ -56,6 +58,11 @@ public class FrmRegistrarGeneral extends javax.swing.JFrame {
         });
 
         btnRegistrarG.setText("Registrar");
+        btnRegistrarG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarGActionPerformed(evt);
+            }
+        });
 
         btnRegresar.setText("Regresar");
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +151,18 @@ public class FrmRegistrarGeneral extends javax.swing.JFrame {
         v.setLocationRelativeTo(v);
         this.dispose();
     }//GEN-LAST:event_btnRegresarActionPerformed
+
+    private void btnRegistrarGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarGActionPerformed
+    
+        String nombre= txtNombreG.getText();
+        String apellido= txtApellidoG.getText(); 
+        long ci= Long.parseLong(txtCIG.getText());
+        String telf=txtTelfG.getText();
+        general.setcI(ci);
+        general.setNombre(nombre);
+        general.setApellido(apellido);        
+        archivoAg.guardarArchivoGenerales(general);
+    }//GEN-LAST:event_btnRegistrarGActionPerformed
 
     /**
      * @param args the command line arguments
