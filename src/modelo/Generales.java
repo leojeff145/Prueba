@@ -11,6 +11,12 @@ package modelo;
  */
 public class Generales extends Cliente{
 
+    public Generales(String nombre, String apellido, long cI, long telefono) {
+        super(nombre, apellido, cI, telefono);
+    }
+    
+    
+
     public Generales() {
     }
     
