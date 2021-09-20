@@ -5,6 +5,8 @@
  */
 package vista;
 
+import controlador.ControladorCorporativo;
+
 /**
  *
  * @author Leonardo Obando
@@ -154,7 +156,8 @@ public class FrmRegistrarCoorporativo extends javax.swing.JFrame {
     }//GEN-LAST:event_txtApellidoCActionPerformed
 
     private void btnRegistrarCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCActionPerformed
-        // TODO add your handling code here:
+        FrmRegistrarCoorporativo v = new FrmRegistrarCoorporativo();
+        ControladorCorporativo corp = new ControladorCorporativo(v);
     }//GEN-LAST:event_btnRegistrarCActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
@@ -200,18 +203,18 @@ public class FrmRegistrarCoorporativo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnRegistrarC;
-    private javax.swing.JButton btnRegresar;
+    public javax.swing.JButton btnRegistrarC;
+    public javax.swing.JButton btnRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtApellidoC;
-    private javax.swing.JTextField txtCIC;
-    private javax.swing.JTextField txtIDEmpresa;
-    private javax.swing.JTextField txtNombreC;
-    private javax.swing.JTextField txtTelfC;
+    public javax.swing.JTextField txtApellidoC;
+    public javax.swing.JTextField txtCIC;
+    public javax.swing.JTextField txtIDEmpresa;
+    public javax.swing.JTextField txtNombreC;
+    public javax.swing.JTextField txtTelfC;
     // End of variables declaration//GEN-END:variables
 }
